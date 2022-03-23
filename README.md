@@ -4,7 +4,7 @@
 
 2) Documentación con Postman: https://documenter.getpostman.com/view/17994456/UVsSP4Jn
 
-3)Usuarios:
+3) Usuarios:
 | Email | Contraseña | 
 | ------------- | ------------- | 
 | marcelo2022@gmail.com  | marceapi |
