@@ -6,7 +6,7 @@ module.exports = (sequalize, DataTypes) => {
             autoIncrement: true
         },
         nombre_usuario: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(50),
             allowNull: false
         },
         email: {
@@ -15,7 +15,7 @@ module.exports = (sequalize, DataTypes) => {
             allowNull: false
         },
         contraseña: {
-            type: DataTypes.STRING(150),
+            type: DataTypes.STRING,
             allowNull: false
         }
     });

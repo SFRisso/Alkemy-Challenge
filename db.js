@@ -6,15 +6,16 @@ const usuariopModel = require('./models/usuario.js');
 
 const sequelize = new Sequelize('alkemy_challenge', 'root', '', {
     host: 'localhost',
-    dialect: 'mysql'
+    dialect: 'mysql',
+    logging: false
 });
 
-try {
-    sequelize.authenticate();
-    console.log('La base de datos se conecto correctamente.');
-} catch (error) {
-    console.error('Se encontro un error al intentar conectar a la base de datos', error);
-}
+sequelize.authenticate()
+    .then(() => {
+        console.log('La base de datos se conecto correctamente.');
+    }).catch((err) => {
+        console.error('Se encontro un error al intentar conectar a la base de datos', err);
+    });
 
 const genero = generoModel(sequelize, Sequelize);
 const personaje = pesonajeModel(sequelize, Sequelize);
@@ -26,9 +27,11 @@ peliSerie.belongsToMany(genero, { through: 'peli_serie_genero', foreignKey: 'pel
 personaje.belongsToMany(peliSerie, { through: 'peli_series_personajes', foreignKey: 'personaje_id', timestamps: false });
 peliSerie.belongsToMany(personaje, { through: 'peli_series_personajes', foreignKey: 'peli_serie_id', timestamps: false });
 
-sequelize.sync({ force: false })
+sequelize.sync({ force: false, logging: false })
     .then(() => {
         console.log('Tablas sincronizadas');
+    }).catch((err) => {
+        console.log("Error al sincronizar las tablas", err);
     });
 
 module.exports = {

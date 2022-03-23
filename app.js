@@ -17,3 +17,5 @@ app.use('/api', apiRouter);
 app.listen(port, () => {
 
 })
+
+module.exports = app;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2022 at 12:46 AM
+-- Generation Time: Mar 23, 2022 at 06:34 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -169,7 +169,7 @@ INSERT INTO `personajes` (`personaje_id`, `imagen`, `nombre`, `edad`, `peso`, `h
 
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
-  `nombre_usuario` varchar(255) NOT NULL,
+  `nombre_usuario` varchar(50) NOT NULL,
   `email` varchar(255) NOT NULL,
   `contraseña` varchar(150) NOT NULL,
   `createdAt` datetime NOT NULL,
@@ -181,8 +181,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre_usuario`, `email`, `contraseña`, `createdAt`, `updatedAt`) VALUES
-(1, 'Marcelo Tinelli', 'marcelo2022@gmail.com', '$2a$10$AsmjkEUwAjKLr4QnL.rYdejXMWYLgQ3zmUPW4iBonGQxdOwe5KYqq', '2022-02-27 17:53:41', '2022-02-27 17:53:41'),
-(2, 'Leo Messi', 'messi2022@gmail.com', '$2a$10$nQSsozs6iwQBmqsi9PK4.eAjRz56V4X2sERoTJ9flS1S.hTSFYZvi', '2022-02-27 20:05:10', '2022-02-27 20:05:10');
+(1, 'MarceloTinelli', 'marcelo2022@gmail.com', '$2a$10$AsmjkEUwAjKLr4QnL.rYdejXMWYLgQ3zmUPW4iBonGQxdOwe5KYqq', '2022-02-27 17:53:41', '2022-02-27 17:53:41'),
+(2, 'LeoMessi', 'messi2022@gmail.com', '$2a$10$nQSsozs6iwQBmqsi9PK4.eAjRz56V4X2sERoTJ9flS1S.hTSFYZvi', '2022-02-27 20:05:10', '2022-02-27 20:05:10');
 
 --
 -- Indexes for dumped tables
@@ -241,13 +241,13 @@ ALTER TABLE `generos`
 -- AUTO_INCREMENT for table `pelis_series`
 --
 ALTER TABLE `pelis_series`
-  MODIFY `peli_serie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `peli_serie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `personajes`
 --
 ALTER TABLE `personajes`
-  MODIFY `personaje_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `personaje_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
