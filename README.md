@@ -18,4 +18,4 @@
 npm test
 ```
 
-Los test se encuentra en /test/api_test.js
+Los tests se encuentran en /test/api_test.js
